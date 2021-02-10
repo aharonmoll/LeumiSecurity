@@ -22,3 +22,6 @@
 1. What user will you use? <br />
 2. What privileges this user should have?
 
+#### run a Client from remote to write to a secured space
+To test a secured space from remote update system properties in runSecuredMain.sh and run it.
+
