@@ -1,3 +1,6 @@
+#run as following:
+# ./runSecuredMain.sh demo gs-admin gs-admin
+
 export GS_LOOKUP_LOCATORS=10.0.0.164,10.0.0.188,10.0.0.175
 export GS_LOOKUP_GROUPS=xap-15.8.0
 export GS_NIC_ADDRESS=10.0.0.129
@@ -16,4 +19,4 @@ ${JAVA_HOME}/bin/java -cp ${CLASSPATH} \
 -Dcom.gs.lrmi.filter.security.password=changeit \
 -Djavax.net.debug=ssl \
 -Dcom.gs.lrmi.filter.security.protocol=TLSv1.2 \
-security.SecuredClient SecuredSpace localhost gs-admin gs-admin
+security.SecuredClient $1 $GS_LOOKUP_LOCATORS $2 $3
